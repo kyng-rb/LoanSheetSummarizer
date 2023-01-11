@@ -4,7 +4,13 @@
     <projectFile>LoanSummarizer/LoanSummarizer.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c043c8-944b-4251-91fb-444d4e0c1a63" name="Changes" comment="" />
+    <list default="true" id="e2c043c8-944b-4251-91fb-444d4e0c1a63" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/LoanSummarizer/Extensions/DataTableExtension.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoanSummarizer/Services/GlobalSummary/FileSummary.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoanSummarizer/Services/GlobalSummary/LogService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoanSummarizer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoanSummarizer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoanSummarizer/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoanSummarizer/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +20,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2K0wlhEQ7BT89ccIJnKdQ7NwdbH" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -63,7 +71,8 @@
       <option name="presentableId" value="Default" />
       <updated>1673124964139</updated>
       <workItem from="1673124965038" duration="5882000" />
-      <workItem from="1673394977009" duration="946000" />
+      <workItem from="1673394977009" duration="1037000" />
+      <workItem from="1673396103370" duration="1153000" />
     </task>
     <servers />
   </component>
