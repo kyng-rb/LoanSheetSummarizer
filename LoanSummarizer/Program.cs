@@ -1,12 +1,7 @@
-﻿using ClosedXML.Excel;
-using LoanSummarizer.Common;
-using LoanSummarizer.Extensions;
-using LoanSummarizer.Services.GlobalSummary;
+﻿using LoanSummarizer.Common;
+using LoanSummarizer.Services.Management;
 
 
-// Open the Excel file
-using var workbook = new XLWorkbook(Constants.FilePath);
-var table = FileSummary.Get(workbook);
-
-LogService.Summary(workbook);
-table.Dump();
+var manager = new ApplicationManager(Constants.FilePath);
+manager.PrintSummaryGroupedByDate();
+//manager.PrintSummary();
