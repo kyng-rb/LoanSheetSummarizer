@@ -6,10 +6,10 @@ public interface IApplicationManager
 {
     void PrintEvents();
 
-    void PrintSummaryGroupedByDate();
-    
+    void PrintSummaryGroupedByDate(int year);
+
     void PrintTotalPendingInterest();
-    
+
     void PrintTotalPendingPrincipal();
 
     void PrintSummary();

@@ -6,13 +6,14 @@ namespace LoanSummarizer.Services.Management;
 
 public partial class ApplicationManager
 {
-    public void PrintSummaryGroupedByDate()
+    public void PrintSummaryGroupedByDate(int year)
     {
         var groupedRows = _events
             .GroupBy(row => new { row.Date.Year, row.Date.Month })
+            .Where(w => w.Key.Year == year)
             .OrderBy(x => x.Key.Year)
             .ThenBy(s => s.Key.Month);
-        
+
         var dataTable = new DataTable();
         dataTable.Columns.Add("Year", typeof(int));
         dataTable.Columns.Add("Month", typeof(int));
@@ -20,15 +21,15 @@ public partial class ApplicationManager
         dataTable.Columns.Add("Principal Collected", typeof(decimal));
         dataTable.Columns.Add("Principal Borrowed", typeof(decimal));
         dataTable.Columns.Add("Amount Collected", typeof(decimal));
-        
+
         foreach (var group in groupedRows)
         {
             var interestCollected = group.Sum(row => row.InterestCollected);
             var principalCollected = group.Sum(row => row.PrincipalCollected);
             var principalBorrowed = group.Where(x => x.Type.Equals("Loan", StringComparison.InvariantCultureIgnoreCase)).Sum(row => row.PrincipalBeginning);
             var amountCollected = interestCollected + principalCollected;
-            
-            dataTable.Rows.Add(group.Key.Year, group.Key.Month, interestCollected, principalCollected, principalBorrowed,amountCollected);
+
+            dataTable.Rows.Add(group.Key.Year, group.Key.Month, interestCollected, principalCollected, principalBorrowed, amountCollected);
         }
 
         dataTable.Dump();
