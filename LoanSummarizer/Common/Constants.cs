@@ -5,7 +5,7 @@ public static class Constants
     public static readonly List<string> ExcludedSheets = new()
     {
         "Summary",
+        "David",
+        "Emilio Recurrent"
     };
-    
-    public const string FilePath = @"C:\Users\rodri\RiderProjects\LoanSummarizer\Loans.xlsx";
 }
